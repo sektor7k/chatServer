@@ -11,7 +11,7 @@ COPY . .
 RUN bun install
 
 # Ortam değişkeni olarak Render’ın verdiği PORT’u kullan
-ENV PORT=3001
+ENV PORT=5001
 
 # API'yi başlat
 CMD ["bun", "run", "start"]
