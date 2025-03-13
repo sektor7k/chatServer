@@ -223,7 +223,7 @@ io.on('connection', (socket) => {
   });
 });
 
-const port = Number(PORT) || 5001;
+const port: number = parseInt(process.env.PORT || '3000', 10);
 httpServer.listen(port, '0.0.0.0', () => {
   console.log(`✅ Sunucu ${port} numaralı portta çalışıyor.`);
 });
