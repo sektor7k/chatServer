@@ -1,7 +1,7 @@
-# Bun tabanlı bir Docker image kullan
-FROM oven/bun:1.0.3
+# Bun tabanlı, 1.2.4 sürümünü kullanan Docker imajı
+FROM oven/bun:1.2.4
 
-# Çalışma dizini belirle
+# Çalışma dizinini ayarla
 WORKDIR /app
 
 # Tüm dosyaları konteynere kopyala
@@ -10,10 +10,8 @@ COPY . .
 # Bağımlılıkları yükle
 RUN bun install
 
-# Ortam değişkeni olarak Render’ın verdiği PORT’u kullan
-
-
+# Container içindeki portu aç
 EXPOSE 5001
 
-# API'yi başlat
+# Uygulamayı başlat
 CMD ["bun", "run", "start"]
